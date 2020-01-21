@@ -1,7 +1,12 @@
 import React from 'react';
+import { PageHeaderWrapper } from '@ant-design/pro-layout';
 
 import styles from './index.less';
 
-const Test = () => <div className={styles.name}>test</div>;
+const Test = () => (
+  <PageHeaderWrapper>
+    <div className={styles.name}>test</div>
+  </PageHeaderWrapper>
+);
 
 export default Test;
