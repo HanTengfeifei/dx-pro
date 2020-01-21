@@ -43,15 +43,13 @@ export interface DefaultSettings {
 }
 
 export default {
-  navTheme: 'dark',
-  // 拂晓蓝
+  navTheme: 'light',
   primaryColor: 'daybreak',
   layout: 'sidemenu',
   contentWidth: 'Fluid',
-  fixedHeader: false,
+  fixedHeader: true,
   autoHideHeader: false,
-  fixSiderbar: false,
-  colorWeak: false,
+  fixSiderbar: true,
   menu: {
     locale: true,
   },
