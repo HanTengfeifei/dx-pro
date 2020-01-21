@@ -115,6 +115,13 @@ export default {
               authority: ['admin'],
             },
             {
+              path: '/test',
+              name: 'test',
+              icon: 'crown',
+              component: './test',
+              authority: ['admin'],
+            },
+            {
               component: './404',
             },
           ],
