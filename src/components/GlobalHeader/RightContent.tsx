@@ -3,11 +3,11 @@ import React from 'react';
 import { connect } from 'dva';
 import { formatMessage } from 'umi-plugin-react/locale';
 import { ConnectProps, ConnectState } from '@/models/connect';
-
 import Avatar from './AvatarDropdown';
 import HeaderSearch from '../HeaderSearch';
 import SelectLang from '../SelectLang';
 import styles from './index.less';
+import NoticeIconView from './NoticeIconView';
 
 export type SiderTheme = 'light' | 'dark';
 export interface GlobalHeaderRightProps extends ConnectProps {
@@ -42,12 +42,8 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = props => {
             id: 'component.globalHeader.search.example3',
           }),
         ]}
-        onSearch={value => {
-          console.log('input', value);
-        }}
-        onPressEnter={value => {
-          console.log('enter', value);
-        }}
+        onSearch={value => typeof value}
+        onPressEnter={value => typeof value}
       />
       <Tooltip
         title={formatMessage({
@@ -63,7 +59,8 @@ const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = props => {
           <Icon type="question-circle-o" />
         </a>
       </Tooltip>
-      <Avatar />
+      <NoticeIconView />
+      <Avatar menu />
       <SelectLang className={styles.action} />
     </div>
   );
